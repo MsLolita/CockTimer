@@ -5,40 +5,99 @@
 	<meta name="viewport"
 		  content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
-	<link rel="stylesheet" type="text/css" href="style.css">
 
-	<title class="title">CockTimer</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+	<link rel ="stylesheet" type="text/css" href="static/css/style.css">
+
+    <title class="title">CockTimer</title>
 </head>
+
 <body>
 <!-- Input -->
 <div class="main__screen">
     <div class="container">
 
         <div class="logo">
-            <img src="img/logo.png" alt="clock">
+            <img src="img/logo.png" alt="Cock img was here">
         </div>
 
-
         <div class="interactive">
-            <input type="text" name="time" class="inputTime" placeholder="/ Enter a time" />
 
-            <button class="btnStart">Start</button>
+            <input type="text" name="time" class="inputTime" placeholder="Enter a time" />
+
+            <div class="btnStart__tooltip tooltip">
+                <button class="btnStart button">Start</button>
+                <span class="btnStart__tooltip__text tooltip__text">30 seconds</span>
+            </div>
+
+            <div class="fastButtons">
+                <ul class="ul">
+                    <li>
+                        <div class="tooltip">
+                            <button class="btnHelp button">30 seconds</button>
+                            <span class="tooltip__text">30 seconds</span>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="tooltip">
+                            <button class="btnHelp button">5 minutes</button>
+                            <span class="tooltip__text">5 minutes</span>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="tooltip">
+                            <button class="btnHelp button">15 minutes</button>
+                            <span class="tooltip__text">15 minutes</span>
+                        </div>
+                    </li>
+                </ul>
+                <ul class="ul">
+                    <li>
+                        <div class="tooltip">
+                            <button class="btnHelp button" title="Pomodoro">Pomodoro</button>
+                            <span class="tooltip__text">25 minutes of work followed by 5 minutes of rest</span>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="tooltip">
+                            <button class="btnHelp button" title="Tabata">Tabata</button>
+                            <span class="tooltip__text">8 reps of 20s high, 10s low intensity</span>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="tooltip">
+                            <button class="btnHelp button" title="Morning">Morning</button>
+                            <span class="tooltip__text">morning</span>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
         </div>
     </div>
 </div>
 
 <!-- Timer -->
 <div class="timer__screen">
-    <div class="time__outer"></div>
-    <div class="timer">
-        <p>
-            <span class="num__time minutes"></span> minutes &nbsp
-            <span class="num__time seconds"></span> seconds
-        </p>
+    <div class="progress__bar"></div>
+    <div class="timer__zone">
+        <span class="up__describe">
+            Time is going...
+        </span>
+        <div class="showTimeStay">
+            <p class="type__time__text"><span class="type__time hours"></span> hours &nbsp</p>
+            <p class="type__time__text"><span class="type__time minutes"></span> minutes &nbsp</p>
+            <p class="type__time__text"><span class="type__time seconds"></span> seconds</p>
+        </div>
+        <div class="return__menu tooltip">
+            <button class="btnReturn__menu button"><i class="fas fa-arrow-circle-left"></i></button>
+            <span class="tooltip__text return__menu__tooltip__text">Stop Timer and return to home page</span>
+        </div>
     </div>
 </div>
 
-<script type="text/javascript" src="script.js"></script>
-
+<script type="module" src="static/js/elements.js"></script>
+<script type="module" src="static/js/timer.js"></script>
 </body>
+
 </html>
