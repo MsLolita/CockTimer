@@ -70,10 +70,10 @@ body {
 
 .inputTime {
     display: inline-block;
-    min-width: 75%;
+    min-width: 70%;
     height: 2em;
     padding: .5em;
-    margin-right: .8em;
+    margin-right: .7em;
 
     box-sizing: border-box;
     border-radius: 200px;
@@ -270,11 +270,11 @@ body {
 
 .btnStart__tooltip {
     display: inline-block;
-    width: 5em;
+    bottom: .2em;
 }
 
 .btnStart__tooltip__text {
-    margin: -5.4em 0 0 .4em;
+    margin: -3em 0 0 -8.7em;
 }
 
 .return__menu__tooltip__text {

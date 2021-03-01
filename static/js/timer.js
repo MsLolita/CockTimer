@@ -57,7 +57,7 @@ class Timer {
         }
 
         (function callWorker() {
-            worker = new Worker("workerTimer.js");
+            worker = new Worker("static/js/workerTimer.js");
 
             worker.postMessage({
                 seconds,
